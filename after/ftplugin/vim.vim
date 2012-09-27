@@ -1,1 +1,1 @@
-set formatoptions=twan2j
+set formatoptions=twan2
