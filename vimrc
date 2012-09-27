@@ -25,11 +25,11 @@ set nocp incsearch nohlsearch
 set smartcase 
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tq2lj
 set cindent
 set autoindent
 set smarttab
 set noexpandtab
+set formatoptions=twan2j
 
 " Visual
 set showmatch  " Show matching brackets.
@@ -89,6 +89,7 @@ map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 
 "Vim-Powerline
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
 
