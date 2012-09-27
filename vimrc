@@ -103,4 +103,4 @@ map <leader>r <ESC>:source ~/.vimrc<CR>
 map <silent> <F3> <ESC>mzgg=G`z
 
 " formatoptions fix
-au FileType * setlocal formatoptions-=r formatoptions-=o
+au FileType * setlocal formatoptions-=ro
