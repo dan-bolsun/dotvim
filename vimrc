@@ -29,7 +29,7 @@ set cindent
 set autoindent
 set smarttab
 set noexpandtab
-set formatoptions=twan2j
+set formatoptions=twan2
 
 " Visual
 set showmatch  " Show matching brackets.
@@ -101,3 +101,6 @@ map <leader>r <ESC>:source ~/.vimrc<CR>
 
 " indent all
 map <silent> <F3> <ESC>mzgg=G`z
+
+" formatoptions fix
+au FileType * setlocal formatoptions-=r formatoptions-=o
