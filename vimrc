@@ -22,7 +22,7 @@ set ts=4  " Tabs are 2 spaces
 set sts=4  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
 set nocp incsearch nohlsearch
-set smartcase 
+set smartcase
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set cindent
@@ -89,7 +89,6 @@ map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 
 "Vim-Powerline
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
 
