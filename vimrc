@@ -6,21 +6,27 @@ filetype on  " Automatically detect file types.  set nocompatible  " no vi compa
 au VimResized * :wincmd =
 
 syntax enable
+if has("gui_running")
+	set lines=40
+	set columns=140
+	set guioptions-=T
+end
 
-set cf  " Enable error files & error jumping.
-set clipboard=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
-set ruler  " Ruler on
-set nu  " Line numbers on
-set nowrap  " Line wrapping off
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+set cf
+set clipboard=unnamedplus
+set history=256
+set autowrite
+set ruler
+set nu
+set nowrap
+set timeoutlen=250
 set hidden
 
 " Formatting
-set ts=4  " Tabs are 2 spaces
-set sts=4  " Tabs are 2 spaces
-set bs=2  " Backspace over everything in insert mode
+set ts=4
+set sts=4
+set sw=4
+set bs=2
 set nocp incsearch nohlsearch
 set smartcase
 set cinoptions=:0,p0,t0
@@ -29,13 +35,12 @@ set cindent
 set autoindent
 set smarttab
 set noexpandtab
-set formatoptions=twan2
+set formatoptions=twn2
 
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
-set list
-set listchars=tab:\ \ ,trail:·,nbsp:%
+set list listchars=tab:\ \ ,trail:$,nbsp:%
 set novisualbell
 set noerrorbells
 set laststatus=2
