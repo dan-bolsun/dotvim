@@ -1,15 +1,16 @@
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-filetype on  " Automatically detect file types.  set nocompatible  " no vi compatibility.
-
-"let terminal resize scale the internal windows
-au VimResized * :wincmd =
+filetype on
 
 syntax enable
 if has("gui_running")
-	set lines=40
-	set columns=140
+	set guifont=Source\ Code\ Pro\ for\ Powerline\ 11,Monospace\ 11
+	set lines=30
+	set columns=130
 	set guioptions-=T
+else
+	"let terminal resize scale the internal windows
+	au VimResized * :wincmd =
 end
 
 set cf
@@ -40,7 +41,7 @@ set formatoptions=twn2
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
-set list listchars=tab:\ \ ,trail:$,nbsp:%
+set list listchars=tab:\ \ ,trail:•,nbsp:˽
 set novisualbell
 set noerrorbells
 set laststatus=2
@@ -57,15 +58,18 @@ cnoremap ;; ;
 nmap NN i<Return><ESC>
 
 " Sudo to write
-cnoremap w!! w !sudo tee % >/dev/null<CR>
+cnoremap w!! w !sudo tee % >/dev/null<CR>L<CR>
 
 "cool stuff with leader
 let mapleader=","
 map , <leader>
 noremap ,, ,
 
-"For editing the vimrc more easily:
+" For editing the vimrc more easily:
 nnoremap <leader>ev :e $MYVIMRC<CR>
+
+" toggle wrap
+nnoremap <leader>w :set wrap!<CR>
 
 "colors
 set t_Co=256
@@ -84,8 +88,8 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 
 " Keep search matches in the middle of the window.
-nnoremap n nzzzv
-nnoremap N Nzzzv
+"nnoremap n nzzzv
+"nnoremap N Nzzzv
 
 "NERDTRee
 map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
@@ -98,7 +102,6 @@ let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 cmap Q q!
-cmap W w
 
 map <silent> <F2> <ESC>:set number!<CR>
 map <leader>r <ESC>:source ~/.vimrc<CR>
