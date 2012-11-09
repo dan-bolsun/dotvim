@@ -19,7 +19,7 @@ set history=256
 set autowrite
 set ruler
 set nu
-set nowrap
+set wrap
 set timeoutlen=250
 set hidden
 
