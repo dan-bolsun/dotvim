@@ -81,7 +81,7 @@ set wildmode=longest,list
 filetype plugin indent on
 set showmode "show the change to the user
 set showcmd
-set shortmess=a
+set shortmess=aoI
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
