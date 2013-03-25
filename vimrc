@@ -111,3 +111,6 @@ map <silent> <F3> <ESC>mzgg=G`z
 
 " formatoptions fix
 au FileType * setlocal formatoptions-=ro
+
+" custom zip/unzip
+let g:zip_unzipcmd="7z x"
