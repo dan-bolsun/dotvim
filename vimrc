@@ -3,6 +3,11 @@ call pathogen#runtime_append_all_bundles()
 filetype on
 
 syntax enable
+
+"colors
+set t_Co=256
+colorscheme wombat
+
 if has("gui_running")
 	set guifont=Source\ Code\ Pro\ for\ Powerline\ 11,Monospace\ 11
 	set lines=30
@@ -11,6 +16,10 @@ if has("gui_running")
 else
 	"let terminal resize scale the internal windows
 	au VimResized * :wincmd =
+
+	if $TERM == "xterm"
+		set background=light
+	end
 end
 
 set cf
@@ -71,10 +80,6 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 " toggle wrap
 nnoremap <leader>w :set wrap!<CR>
 
-"colors
-set t_Co=256
-colorscheme wombat
-
 "other stuff
 set scrolloff=3 "So the cursor doesnt get lost on the edge
 set wildmode=longest,list
@@ -114,3 +119,6 @@ au FileType * setlocal formatoptions-=ro
 
 " custom zip/unzip
 let g:zip_unzipcmd="7z x"
+
+" old regexp engine
+set regexpengine=1
