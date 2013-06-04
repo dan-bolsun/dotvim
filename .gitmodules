@@ -25,3 +25,6 @@
 [submodule "bundle/vim-systemd"]
 	path = bundle/vim-systemd
 	url = http://fedorapeople.org/cgit/wwoods/public_git/vim-scripts.git
+[submodule "bundle/vim-haproxy"]
+	path = bundle/vim-haproxy
+	url = https://github.com/ksauzz/haproxy.vim.git

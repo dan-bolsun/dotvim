@@ -83,7 +83,6 @@ nnoremap <leader>w :set wrap!<CR>
 "other stuff
 set scrolloff=3 "So the cursor doesnt get lost on the edge
 set wildmode=longest,list
-filetype plugin indent on
 set showmode "show the change to the user
 set showcmd
 set shortmess=aoI
@@ -121,4 +120,6 @@ au FileType * setlocal formatoptions-=ro
 let g:zip_unzipcmd="7z x"
 
 " old regexp engine
-set regexpengine=1
+if exists("&regexpengine")
+	set regexpengine=1
+end
