@@ -1,6 +1,6 @@
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-filetype on
+filetype plugin indent on
 
 syntax enable
 
@@ -10,9 +10,14 @@ colorscheme wombat
 
 if has("gui_running")
 	set guifont=Source\ Code\ Pro\ for\ Powerline\ 11,Monospace\ 11
-	set lines=30
-	set columns=130
+	set lines=35
+	set columns=145
 	set guioptions-=T
+	set guioptions-=r
+	set guioptions-=R
+	set guioptions-=l
+	set guioptions-=L
+
 else
 	"let terminal resize scale the internal windows
 	au VimResized * :wincmd =
@@ -33,11 +38,11 @@ set timeoutlen=250
 set hidden
 
 " Formatting
-set ts=4
-set sts=4
-set sw=4
+set ts=8
+set sts=8
+set sw=8
 set bs=2
-set nocp incsearch nohlsearch
+set nocp incsearch "nohlsearch
 set smartcase
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
@@ -45,6 +50,7 @@ set cindent
 set autoindent
 set smarttab
 set noexpandtab
+set smartindent
 set formatoptions=twn2
 
 " Visual
@@ -113,13 +119,19 @@ map <leader>r <ESC>:source ~/.vimrc<CR>
 " indent all
 map <silent> <F3> <ESC>mzgg=G`z
 
-" formatoptions fix
-au FileType * setlocal formatoptions-=ro
-
 " custom zip/unzip
 let g:zip_unzipcmd="7z x"
 
-" old regexp engine
-if exists("&regexpengine")
-	set regexpengine=1
-end
+"" old regexp engine
+"if exists("&regexpengine")
+"	set regexpengine=1
+"end
+
+" formatoptions fix
+au FileType * setlocal formatoptions-=ro
+
+" Mutt tuning
+au BufRead /tmp/mutt-* set tw=72
+
+" Allow to gf when '=' is used without spaces
+set includeexpr=substitute(v:fname,'^.*=','','')
