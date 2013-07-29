@@ -9,7 +9,7 @@ set t_Co=256
 colorscheme wombat
 
 if has("gui_running")
-	set guifont=Source\ Code\ Pro\ for\ Powerline\ 11,Monospace\ 11
+	set guifont=Inconsolata\ for\ Powerline\ Medium\ 13
 	set lines=35
 	set columns=145
 	set guioptions-=T
@@ -107,9 +107,13 @@ map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
 "BufExplorer
 nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 
-"Vim-Powerline
-let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
+
+"Vim-Powerline
+"let g:Powerline_symbols = 'fancy'
+
+" vim-airline
+let g:airline_powerline_fonts = 1
 
 cmap Q q!
 
@@ -119,14 +123,6 @@ map <leader>r <ESC>:source ~/.vimrc<CR>
 " indent all
 map <silent> <F3> <ESC>mzgg=G`z
 
-" custom zip/unzip
-let g:zip_unzipcmd="7z x"
-
-"" old regexp engine
-"if exists("&regexpengine")
-"	set regexpengine=1
-"end
-
 " formatoptions fix
 au FileType * setlocal formatoptions-=ro
 
@@ -135,3 +131,6 @@ au BufRead /tmp/mutt-* set tw=72
 
 " Allow to gf when '=' is used without spaces
 set includeexpr=substitute(v:fname,'^.*=','','')
+
+" stop vim to reindent comments
+set cinkeys-=0#
