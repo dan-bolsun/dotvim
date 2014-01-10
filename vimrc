@@ -25,6 +25,8 @@ else
 	if $TERM == "xterm"
 		set background=light
 	end
+
+	map <silent> <F4> <ESC>:set paste!<CR>
 end
 
 set cf
@@ -65,29 +67,15 @@ set mousehide
 set mouse=a
 set antialias
 
-"semicolon as colon
-nmap ; :
-cnoremap ;; ;
-
-"So we can split a line somewhere
-nmap NN i<Return><ESC>
-
 " Sudo to write
-cnoremap w!! w !sudo tee % >/dev/null<CR>L<CR>
+cnoremap w!! w !sudo tee % >/dev/null<CR>
 
 "cool stuff with leader
 let mapleader=","
 map , <leader>
-noremap ,, ,
-
-" For editing the vimrc more easily:
-nnoremap <leader>ev :e $MYVIMRC<CR>
-
-" toggle wrap
-nnoremap <leader>w :set wrap!<CR>
 
 "other stuff
-set scrolloff=3 "So the cursor doesnt get lost on the edge
+set scrolloff=2 "So the cursor doesnt get lost on the edge
 set wildmode=longest,list
 set showmode "show the change to the user
 set showcmd
@@ -97,10 +85,6 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 
-" Keep search matches in the middle of the window.
-"nnoremap n nzzzv
-"nnoremap N Nzzzv
-
 "NERDTRee
 map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
 
@@ -109,13 +93,16 @@ nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 
 set encoding=utf-8 " Necessary to show unicode glyphs
 
-"Vim-Powerline
-"let g:Powerline_symbols = 'fancy'
-
 " vim-airline
 let g:airline_powerline_fonts = 1
 
 cmap Q q!
+
+" For editing the vimrc more easily:
+nnoremap <leader>ev :e $MYVIMRC<CR>
+
+" toggle wrap
+nnoremap <leader>w :set wrap!<CR>
 
 map <silent> <F2> <ESC>:set number!<CR>
 map <leader>r <ESC>:source ~/.vimrc<CR>
@@ -124,7 +111,8 @@ map <leader>r <ESC>:source ~/.vimrc<CR>
 map <silent> <F3> <ESC>mzgg=G`z
 
 " formatoptions fix
-au FileType * setlocal formatoptions-=ro
+au FileType * setlocal formatoptions-=r
+au FileType * setlocal formatoptions-=o
 
 " Mutt tuning
 au BufRead /tmp/mutt-* set tw=72
