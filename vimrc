@@ -75,7 +75,7 @@ let mapleader=","
 map , <leader>
 
 "other stuff
-set scrolloff=2 "So the cursor doesnt get lost on the edge
+"set scrolloff=2 "So the cursor doesnt get lost on the edge
 set wildmode=longest,list
 set showmode "show the change to the user
 set showcmd
