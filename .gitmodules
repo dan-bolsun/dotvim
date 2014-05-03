@@ -13,6 +13,9 @@
 [submodule "bundle/vim-nerdtree"]
 	path = bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-nginx"]
+	path = bundle/vim-nginx
+	url = /dev/null
 [submodule "bundle/vim-systemd"]
 	path = bundle/vim-systemd
 	url = http://fedorapeople.org/cgit/wwoods/public_git/vim-scripts.git
