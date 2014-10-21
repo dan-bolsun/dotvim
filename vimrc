@@ -9,7 +9,7 @@ set t_Co=256
 colorscheme wombat
 
 if has("gui_running")
-	set guifont=Inconsolata\ for\ Powerline\ Medium\ 13
+	set guifont=Inconsolata 13
 	set lines=35
 	set columns=145
 	set guioptions-=T
@@ -81,9 +81,9 @@ set showmode "show the change to the user
 set showcmd
 set shortmess=aoI
 "folding settings
-set foldmethod=indent   "fold based on indent
+set foldmethod=manual   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
+"set nofoldenable        "dont fold by default
 
 "NERDTRee
 map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
@@ -94,9 +94,10 @@ nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 " vim-airline
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 cmap Q q!
+nmap q :q
 
 " For editing the vimrc more easily:
 nnoremap <leader>ev :e $MYVIMRC<CR>
