@@ -19,9 +19,6 @@
 [submodule "bundle/vim-systemd"]
 	path = bundle/vim-systemd
 	url = http://fedorapeople.org/cgit/wwoods/public_git/vim-scripts.git
-[submodule "bundle/vim-haproxy"]
-	path = bundle/vim-haproxy
-	url = https://github.com/ksauzz/haproxy.vim.git
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
@@ -31,15 +28,3 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-syntax-vcl"]
-	path = bundle/vim-syntax-vcl
-	url = https://github.com/pld-linux/vim-syntax-vcl.git
-[submodule "bundle/rust.vim"]
-	path = bundle/rust.vim
-	url = https://github.com/wting/rust.vim.git
-[submodule "bundle/vim-keepalived"]
-	path = bundle/vim-keepalived
-	url = https://github.com/glidenote/keepalived-syntax.vim.git
-[submodule "bundle/vim-ansible-yaml"]
-	path = bundle/vim-ansible-yaml
-	url = git://github.com/chase/vim-ansible-yaml.git
