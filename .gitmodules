@@ -7,9 +7,6 @@
 [submodule "bundle/vim-bufexplorer"]
 	path = bundle/vim-bufexplorer
 	url = https://github.com/cclow/vim-bufexplorer.git
-[submodule "bundle/vim-tmux"]
-	path = bundle/vim-tmux
-	url = https://github.com/dan-bolsun/vim-tmux.git
 [submodule "bundle/vim-nerdtree"]
 	path = bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -31,3 +28,6 @@
 [submodule "bundle/vim-jinja"]
 	path = bundle/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
+[submodule "bundle/vim-tmux"]
+	path = bundle/vim-tmux
+	url = git://github.com/tmux-plugins/vim-tmux.git
