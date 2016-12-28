@@ -21,11 +21,6 @@ if has("gui_running")
 else
 	"let terminal resize scale the internal windows
 	au VimResized * :wincmd =
-
-	if $TERM == "xterm"
-		set background=light
-	end
-
 	map <silent> <F4> <ESC>:set paste!<CR>
 end
 
@@ -123,3 +118,4 @@ set includeexpr=substitute(v:fname,'^.*=','','')
 
 " stop vim to reindent comments
 set cinkeys-=0#
+
