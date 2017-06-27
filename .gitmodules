@@ -31,3 +31,9 @@
 [submodule "bundle/vim-tmux"]
 	path = bundle/vim-tmux
 	url = git://github.com/tmux-plugins/vim-tmux.git
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
+[submodule "bundle/cql-vim"]
+	path = bundle/cql-vim
+	url = git@github.com:elubow/cql-vim.git

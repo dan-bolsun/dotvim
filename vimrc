@@ -91,6 +91,9 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 " vim-airline
 let g:airline_powerline_fonts = 0
 
+" terraform enable
+let g:terraform_align=1
+
 cmap Q q!
 nmap q :q
 
