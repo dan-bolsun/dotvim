@@ -89,7 +89,7 @@ nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 " vim-airline
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts=0
 
 " terraform enable
 let g:terraform_align=1
@@ -122,3 +122,5 @@ set includeexpr=substitute(v:fname,'^.*=','','')
 " stop vim to reindent comments
 set cinkeys-=0#
 
+" dos ff for separate files
+au BufRead /tmp/k/* set ff=dos
