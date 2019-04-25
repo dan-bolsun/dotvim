@@ -60,7 +60,6 @@ set laststatus=2
 
 set mousehide
 set mouse=a
-set antialias
 
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null<CR>
