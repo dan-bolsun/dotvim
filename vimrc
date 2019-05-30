@@ -10,8 +10,8 @@ colorscheme wombat
 
 if has("gui_running")
 	set guifont=Inconsolata 13
-	set lines=35
-	set columns=145
+	set lines=36
+	set columns=148
 	set guioptions-=T
 	set guioptions-=r
 	set guioptions-=R
