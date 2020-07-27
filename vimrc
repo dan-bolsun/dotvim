@@ -124,3 +124,11 @@ set cinkeys-=0#
 
 " dos ff for separate files
 au BufRead /tmp/k/* set ff=dos
+
+" ejs highlight
+au BufNewFile,BufRead *.ejs set filetype=html
+" js tweaks
+au BufNewFile,BufRead *.*js* setlocal expandtab
+au BufNewFile,BufRead *.*js* setlocal tabstop=2
+au BufNewFile,BufRead *.*js* setlocal softtabstop=2
+au BufNewFile,BufRead *.*js* setlocal shiftwidth=2
