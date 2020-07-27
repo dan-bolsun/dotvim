@@ -10,8 +10,8 @@ colorscheme wombat
 
 if has("gui_running")
 	set guifont=Inconsolata 13
-	set lines=35
-	set columns=145
+	set lines=36
+	set columns=148
 	set guioptions-=T
 	set guioptions-=r
 	set guioptions-=R
@@ -60,7 +60,6 @@ set laststatus=2
 
 set mousehide
 set mouse=a
-set antialias
 
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null<CR>
