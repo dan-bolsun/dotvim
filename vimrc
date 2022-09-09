@@ -6,7 +6,7 @@ syntax enable
 
 "colors
 set t_Co=256
-colorscheme wombat
+"colorscheme wombat
 
 if has("gui_running")
 	set guifont=Inconsolata 13
@@ -88,7 +88,7 @@ nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 " vim-airline
-let g:airline_powerline_fonts=0
+let g:airline_powerline_fonts=1
 
 " terraform enable
 let g:terraform_align=1
@@ -131,3 +131,8 @@ au BufNewFile,BufRead *.*js* setlocal expandtab
 au BufNewFile,BufRead *.*js* setlocal tabstop=2
 au BufNewFile,BufRead *.*js* setlocal softtabstop=2
 au BufNewFile,BufRead *.*js* setlocal shiftwidth=2
+
+" jedi
+pa! python-jedi
+set completeopt-=preview
+
