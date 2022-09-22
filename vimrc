@@ -6,7 +6,6 @@ syntax enable
 
 "colors
 set t_Co=256
-"colorscheme wombat
 
 if has("gui_running")
 	set guifont=Inconsolata 13
@@ -90,14 +89,8 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 " vim-airline
 let g:airline_powerline_fonts=1
 
-" terraform enable
-let g:terraform_align=1
-
 cmap Q q!
 nmap q :q
-
-" For editing the vimrc more easily:
-nnoremap <leader>ev :e $MYVIMRC<CR>
 
 " toggle wrap
 nnoremap <leader>w :set wrap!<CR>
@@ -112,17 +105,11 @@ map <silent> <F3> <ESC>mzgg=G`z
 au FileType * setlocal formatoptions-=r
 au FileType * setlocal formatoptions-=o
 
-" Mutt tuning
-au BufRead /tmp/mutt-* set tw=72
-
 " Allow to gf when '=' is used without spaces
 set includeexpr=substitute(v:fname,'^.*=','','')
 
 " stop vim to reindent comments
 set cinkeys-=0#
-
-" dos ff for separate files
-au BufRead /tmp/k/* set ff=dos
 
 " ejs highlight
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -135,4 +122,3 @@ au BufNewFile,BufRead *.*js* setlocal shiftwidth=2
 " jedi
 pa! python-jedi
 set completeopt-=preview
-
