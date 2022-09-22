@@ -125,3 +125,7 @@ set completeopt-=preview
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" termdebug
+pa! termdebug
+nmap <F5> :Termdebug<CR>
