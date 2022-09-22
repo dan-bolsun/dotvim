@@ -122,3 +122,6 @@ au BufNewFile,BufRead *.*js* setlocal shiftwidth=2
 " jedi
 pa! python-jedi
 set completeopt-=preview
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
