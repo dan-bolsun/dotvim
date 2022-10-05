@@ -1,12 +1,13 @@
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
 
+filetype plugin indent on
 syntax enable
 
-"colors
+" colors
 set t_Co=256
 
+" gui
 if has("gui_running")
 	set guifont=Inconsolata 13
 	set lines=36
@@ -16,7 +17,6 @@ if has("gui_running")
 	set guioptions-=R
 	set guioptions-=l
 	set guioptions-=L
-
 else
 	"let terminal resize scale the internal windows
 	au VimResized * :wincmd =
@@ -63,9 +63,12 @@ set mouse=a
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null<CR>
 
-"cool stuff with leader
+" leader stuff
 let mapleader=","
 map , <leader>
+map <leader>e <ESC>:e ~/.vimrc<CR>
+map <leader>r <ESC>:source ~/.vimrc<CR>
+nnoremap <leader>w :set wrap!<CR>
 
 "other stuff
 "set scrolloff=2 "So the cursor doesnt get lost on the edge
@@ -76,7 +79,7 @@ set shortmess=aoI
 "folding settings
 set foldmethod=manual   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
-"set nofoldenable        "dont fold by default
+"set nofoldenable       "dont fold by default
 
 "NERDTRee
 map <silent> <C-N> <ESC>:NERDTreeToggle<CR>
@@ -92,11 +95,8 @@ let g:airline_powerline_fonts=1
 cmap Q q!
 nmap q :q
 
-" toggle wrap
-nnoremap <leader>w :set wrap!<CR>
-
+" line numbers
 map <silent> <F2> <ESC>:set number!<CR>
-map <leader>r <ESC>:source ~/.vimrc<CR>
 
 " indent all
 map <silent> <F3> <ESC>mzgg=G`z
@@ -111,14 +111,6 @@ set includeexpr=substitute(v:fname,'^.*=','','')
 " stop vim to reindent comments
 set cinkeys-=0#
 
-" ejs highlight
-au BufNewFile,BufRead *.ejs set filetype=html
-" js tweaks
-au BufNewFile,BufRead *.*js* setlocal expandtab
-au BufNewFile,BufRead *.*js* setlocal tabstop=2
-au BufNewFile,BufRead *.*js* setlocal softtabstop=2
-au BufNewFile,BufRead *.*js* setlocal shiftwidth=2
-
 " jedi
 pa! python-jedi
 set completeopt-=preview
@@ -128,4 +120,4 @@ nmap <F8> :TagbarToggle<CR>
 
 " termdebug
 pa! termdebug
-nmap <F5> :Termdebug<CR>
+au BufNewFile,BufRead *.rs let termdebugger="rust-gdb"
