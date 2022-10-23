@@ -66,8 +66,8 @@ cnoremap w!! w !sudo tee % >/dev/null<CR>
 " leader stuff
 let mapleader=","
 map , <leader>
-map <leader>e <ESC>:e ~/.vimrc<CR>
-map <leader>r <ESC>:source ~/.vimrc<CR>
+map <leader>e <ESC>:e ~/.vim/vimrc<CR>
+map <leader>r <ESC>:source ~/.vim/vimrc<CR>
 nnoremap <leader>w :set wrap!<CR>
 
 "other stuff
@@ -106,7 +106,7 @@ au FileType * setlocal formatoptions-=r
 au FileType * setlocal formatoptions-=o
 
 " Allow to gf when '=' is used without spaces
-set includeexpr=substitute(v:fname,'^.*=','','')
+set includeexpr=substitute(v:fname,'^.*=-\\?','','')
 
 " stop vim to reindent comments
 set cinkeys-=0#
