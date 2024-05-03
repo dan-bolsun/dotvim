@@ -111,13 +111,11 @@ set includeexpr=substitute(v:fname,'^.*=-\\?','','')
 " stop vim to reindent comments
 set cinkeys-=0#
 
-" jedi
-pa! python-jedi
-set completeopt-=preview
+"" tagbar
+"nmap <F8> :TagbarToggle<CR>
 
-" tagbar
-nmap <F8> :TagbarToggle<CR>
+"" termdebug
+"pa! termdebug
+"au BufNewFile,BufRead *.rs let termdebugger="rust-gdb"
 
-" termdebug
-pa! termdebug
-au BufNewFile,BufRead *.rs let termdebugger="rust-gdb"
+set bg=dark
