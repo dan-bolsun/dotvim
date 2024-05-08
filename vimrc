@@ -90,7 +90,7 @@ nmap <silent> <C-H> <ESC>:BufExplorer<CR>
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 " vim-airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 
 cmap Q q!
 nmap q :q
