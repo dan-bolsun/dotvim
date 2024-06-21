@@ -19,3 +19,6 @@
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
+[submodule "bundle/vim-haproxy"]
+	path = bundle/vim-haproxy
+	url = https://github.com/Joorem/vim-haproxy.git
