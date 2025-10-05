@@ -1,5 +1,4 @@
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 filetype plugin indent on
 syntax enable
