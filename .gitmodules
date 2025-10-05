@@ -1,6 +1,3 @@
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/vim-bufexplorer"]
 	path = bundle/vim-bufexplorer
 	url = https://github.com/cclow/vim-bufexplorer.git
