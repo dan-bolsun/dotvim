@@ -5,6 +5,8 @@ syntax enable
 
 " colors
 set t_Co=256
+set bg=dark
+colorscheme murphy
 
 " gui
 if has("gui_running")
@@ -116,5 +118,3 @@ set cinkeys-=0#
 "" termdebug
 "pa! termdebug
 "au BufNewFile,BufRead *.rs let termdebugger="rust-gdb"
-
-set bg=dark
