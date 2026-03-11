@@ -6,7 +6,7 @@ syntax enable
 " colors
 set t_Co=256
 set bg=dark
-colorscheme murphy
+" colorscheme murphy
 
 " gui
 if has("gui_running")
